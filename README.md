@@ -24,6 +24,8 @@ $ composer require egyg33k/domain-parser-bundle
 ## Usage
 
 ``` php
+        // Add this line to your AppKernel.php new Egyg33k\DomainParserBundle\Egyg33kDomainParserBundle(),
+        // Then you can use it as following
         $parser = $this->container->get('egyg33k.domainParser');
         $host = 'http://user:pass@www.pref.okinawa.jp:8080/path/to/page.html?query=string#fragment';
         $url = $parser->parseUrl($host);
