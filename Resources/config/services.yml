@@ -1,0 +1,6 @@
+services:
+    egyg33k.publicSuffixListManager:
+        class: Pdp\PublicSuffixListManager
+    egyg33k.domainParser:
+        class: Pdp\Parser
+        arguments: ['@=service("egyg33k.publicSuffixListManager").getList()']
